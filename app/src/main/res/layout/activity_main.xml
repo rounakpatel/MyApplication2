@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Red Devils"
+        android:text="Red Devils"
         android:textSize="20sp"
         android:textColor="#EC0519"
         android:textStyle="bold"
@@ -23,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Blue Jays"
+        android:text="Blue Jays"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="#065FF4"
@@ -33,26 +31,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/team_score_red_devils"
+        android:id="@+id/red_score_devils"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="0"
-        android:textColor="#000000"
+        android:textColor="#EC0519"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <TextView
-        android:id="@+id/team_score_blue_jays"
+        android:id="@+id/blue_score_jays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="0"
-        android:textColor="#000000"
+        android:textColor="#065FF4"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -60,59 +58,59 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/buttonUp_reddevils"
+        android:id="@+id/buttonUp_devils"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginStart="16dp"
         android:background="#EC0519"
-        android:text="Up"
-        android:textColor="#fff"
+        android:text="+"
+        android:textColor="#E6DEDE"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/team_score_red_devils" />
+        app:layout_constraintTop_toBottomOf="@+id/red_score_devils" />
     <Button
-        android:id="@+id/buttonUp_bluejays"
+        android:id="@+id/buttonUp_jays"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="#065FF4"
         android:textColor="#fff"
-        android:text="Up"
+        android:text="+"
         android:layout_marginTop="64dp"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/team_score_blue_jays" />
+        app:layout_constraintTop_toBottomOf="@+id/blue_score_jays" />
 
     <Button
-        android:id="@+id/buttonDown_reddevils"
+        android:id="@+id/buttonDown_devils"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="#EC0519"
-        android:text="Down"
+        android:text="-"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/buttonUp_reddevils"
-        app:layout_constraintStart_toStartOf="@+id/buttonUp_reddevils"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUp_reddevils" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonUp_devils"
+        app:layout_constraintStart_toStartOf="@+id/buttonUp_devils"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUp_devils" />
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Down"
-        android:id="@+id/buttonDown_bluejays"
+        android:text="-"
+        android:id="@+id/buttonDown_jays"
         android:background="#065FF4"
         android:textColor="#fff"
         android:textSize="20sp"
         android:layout_marginTop="16dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/buttonUp_bluejays"
-        app:layout_constraintStart_toStartOf="@+id/buttonUp_bluejays"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUp_bluejays" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonUp_jays"
+        app:layout_constraintStart_toStartOf="@+id/buttonUp_jays"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUp_jays" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -122,7 +120,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDown_reddevils">
+        app:layout_constraintTop_toBottomOf="@+id/buttonDown_devils">
 
         <TextView
             android:layout_width="wrap_content"
@@ -146,9 +144,21 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-
-
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </RadioGroup>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
